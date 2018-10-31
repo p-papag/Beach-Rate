@@ -19,7 +19,8 @@ var commentRoutes    = require("./routes/comments"),
     
 //mongodb://localhost/yelp_camp_v6 local database
 //mongodb://<dbuser>:<dbpassword>@ds159187.mlab.com:59187/project_z  using the mongolab online database
-mongoose.connect("process.ENV.DATABASEURL");
+var url = process.ENV.DATABASEURL || "mongodb://localhost/yelp_camp_v6";
+mongoose.connect(url);
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
