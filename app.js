@@ -6,7 +6,7 @@ var express     = require("express"),
     flash       = require("connect-flash"),
     LocalStrategy = require("passport-local"),
     methodOverride = require("method-override"),
-    Campground  = require("./models/campground"),
+    Beach  = require("./models/beach"),
     Comment     = require("./models/comment"),
     User        = require("./models/user"),
     //seed the database
@@ -14,7 +14,7 @@ var express     = require("express"),
     
 //requring routes
 var commentRoutes    = require("./routes/comments"),
-    campgroundRoutes = require("./routes/campgrounds"),
+    beachRoutes = require("./routes/beaches"),
     indexRoutes      = require("./routes/index")
     
 //mongodb://localhost/yelp_camp_v6 local database
@@ -31,7 +31,7 @@ app.use(flash());
 
 // PASSPORT CONFIGURATION
 app.use(require("express-session")({
-    secret: "Once again Rusty wins cutest dog!",
+    secret: "This beach is awesome dude!",
     resave: false,
     saveUninitialized: false
 }));
@@ -49,9 +49,9 @@ app.use(function(req, res, next){
 });
 
 app.use("/", indexRoutes);
-app.use("/campgrounds", campgroundRoutes);
-app.use("/campgrounds/:id/comments", commentRoutes);
+app.use("/beaches", beachRoutes);
+app.use("/beaches/:id/comments", commentRoutes);
 
 app.listen(process.env.PORT, process.env.IP, function(){
-   console.log("The YelpCamp Server Has Started!");
+   console.log("The BeachRate Server Has Started!");
 });

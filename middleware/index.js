@@ -1,18 +1,18 @@
 //all the middleware goes here
 var middlewareObj = {};
-var Campground = require("../models/campground.js");
+var Beach = require("../models/beach.js");
 var Comment = require("../models/comment.js");
 
 
-middlewareObj.checkCampgroundOwnership = function (req, res, next) { 
+middlewareObj.checkBeachOwnership = function (req, res, next) { 
     if(req.isAuthenticated()){
-        Campground.findById(req.params.id, function(err, foundCampground){
-         if(err || !foundCampground) {
-                req.flash("error","Campground not found!");
+        Beach.findById(req.params.id, function(err, foundBeach){
+         if(err || !foundBeach) {
+                req.flash("error","Beach not found!");
                 res.redirect("back");
             } else {
-                //does user own the campground?
-                if(foundCampground.author.id.equals(req.user._id)) {
+                //does user own the beach?
+                if(foundBeach.author.id.equals(req.user._id)) {
                     next();
                 } else {
                     req.flash("error", "You don't have permission to do that!");
