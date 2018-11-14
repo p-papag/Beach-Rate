@@ -1,4 +1,4 @@
-#YelpCamp
+#BeachRate
 
 ##Initial Setup
 * Add Landing Page
