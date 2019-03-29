@@ -101,7 +101,7 @@ Each beach has:
 RESTFUL ROUTES
 
 name      url      verb    desc.
-===============================================
+--------------------------------
 INDEX   /beaches
 NEW     /beaches/new
 CREATE  /beaches
