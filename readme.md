@@ -2,8 +2,9 @@
 
 ##Steps taken for the whole project.
 ====================================
-First make sure you install Node.js from here : nodejs.org
+First make sure you install Node.js from here : nodejs.org .
 Then, from the package.json, check the dependecies and install them.
+====================================
 ##Initial Setup
 * Add Landing Page
 * Add Beaches Page that lists all Beaches
