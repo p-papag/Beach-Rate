@@ -1,10 +1,14 @@
 #BeachRate
 
+##Steps taken for the whole project.
+====================================
+First make sure you install Node.js from here : nodejs.org
+Then, from the package.json, check the dependecies and install them.
 ##Initial Setup
 * Add Landing Page
-* Add Campgrounds Page that lists all campgrounds
+* Add Beaches Page that lists all Beaches
 
-Each Campground has:
+Each beach has:
    * Name
    * Image
 
@@ -12,28 +16,28 @@ Each Campground has:
 * Create our header and footer partials
 * Add in Bootstrap
 
-##Creating New Campgrounds
-* Setup new campground POST route
+##Creating New Beaches
+* Setup new beach POST route
 * Add in body-parser
 * Setup route to show form
 * Add basic unstyled form
 
-##Style the campgrounds page
+##Style the Beaches page
 * Add a better header/title
-* Make campgrounds display in a grid
+* Make Beaches display in a grid
 
 ##Style the Navbar and Form
 * Add a navbar to all templates
-* Style the new campground form
+* Style the new beach form
 
 ##Add Mongoose
 * Install and configure Mongoose
-* Setup campground model
-* Use campground model inside of our routes
+* Setup beach model
+* Use beach model inside of our routes
 
 ##Show Page
 * Review the RESTful routes we've seen so far
-* Add description to our campground model
+* Add description to our beach model
 * Show db.collection.drop()
 * Add a show route/template
 
@@ -48,7 +52,7 @@ Each Campground has:
 
 ##Add the Comment model!
 * Make our errors go away!
-* Display comments on campground show page
+* Display comments on beach show page
 
 ##Comment New/Create
 * Discuss nested routes
@@ -97,15 +101,10 @@ RESTFUL ROUTES
 
 name      url      verb    desc.
 ===============================================
-INDEX   /dogs      GET   Display a list of all dogs
-NEW     /dogs/new  GET   Displays form to make a new dog
-CREATE  /dogs      POST  Add new dog to DB
-SHOW    /dogs/:id  GET   Shows info about one dog
+INDEX   /beaches
+NEW     /beaches/new
+CREATE  /beaches
+SHOW    /beaches/:id
 
-INDEX   /campgrounds
-NEW     /campgrounds/new
-CREATE  /campgrounds
-SHOW    /campgrounds/:id
-
-NEW     campgrounds/:id/comments/new    GET
-CREATE  campgrounds/:id/comments      POST
+NEW     beaches/:id/comments/new    GET
+CREATE  beaches/:id/comments      POST
