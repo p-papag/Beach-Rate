@@ -94,11 +94,11 @@ Each beach has:
 
 RESTFUL ROUTES
 
-| Name  | URL | Verb | Desc. |
-| ------------- | ------------- |------------- |------------- |
+| Name  | URL |
+| ------------- | ------------- |
 | INDEX  | /beaches  |
 | NEW    | /beaches/new  |
 |  CREATE | /beaches  |
 |  SHOW | /beaches/:id  |
-|  NEW  | beaches/:id/comments/new  | | GET |
-| CREATE  | beaches/:id/comments  | | POST |
+|  NEW  | beaches/:id/comments/new  |
+| CREATE  | beaches/:id/comments |
